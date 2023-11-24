@@ -21,6 +21,11 @@ header {
   width: 100%;
   top: 0;
   z-index: 100;
+  transition: 650ms;
+}
+.changeColorway {
+  background-color: white;
+  transition: 650ms;
 }
 ul {
   display: flex;
