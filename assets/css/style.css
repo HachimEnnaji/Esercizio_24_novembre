@@ -71,11 +71,10 @@ nav ul li:last-child a {
   cursor: pointer;
 }
 article {
-  border-bottom: 1px solid black;
   padding: 10em;
 }
 article h3 {
-  padding: 2rem 0 2rem 10em;
+  padding: 2rem 0 2rem 7em;
   font-family: "Spectral", serif;
   vertical-align: top;
 }
@@ -86,7 +85,8 @@ h3 span {
 .containerArticles {
   display: flex;
   flex-wrap: wrap;
-  padding-inline: 10em;
+  padding-inline: 7em;
+  border-bottom: #d2d0d0 1px solid;
 }
 .allArticles {
   display: flex;
@@ -197,13 +197,22 @@ article .containerArticles .allArticles span,
   .allArticles {
     width: 50%;
   }
+  article h3 {
+    padding: 2rem 0 2rem 3em;
+  }
+  .containerArticles {
+    padding-inline: 3em;
+  }
   .containerCorrelated {
     margin: 2em;
-    display: unset;
+    flex-direction: column-reverse;
+    padding-inline: unset;
   }
   .tags {
     display: flex;
     flex-direction: column;
+    position: unset;
+    top: unset;
   }
   .asidesArticles {
     display: unset;
@@ -213,22 +222,26 @@ article .containerArticles .allArticles span,
     margin: 2em;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 651px) {
   .container {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 20px;
   }
-  nav ul {
-    padding: 1em;
+  ul li:not(:last-child):not(:nth-last-child(2)) {
+    display: none;
   }
   .wrapper {
-    display: unset;
     margin: 1em;
   }
   .asidesArticles {
     display: flex;
     flex-direction: column;
+    margin: 0.5em;
+  }
+  .containerCorrelated {
     margin: 2em;
+    flex-direction: column-reverse;
+    padding-inline: unset;
   }
   .allArticles {
     width: 100%;
