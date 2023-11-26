@@ -4,6 +4,10 @@ body {
   box-sizing: border-box;
   position: relative;
 }
+.disappear {
+  opacity: 0;
+  transition: 400ms;
+}
 header {
   background-color: #ffc017;
   margin-inline: 50px;
@@ -229,6 +233,9 @@ article .containerArticles .allArticles span,
   }
   ul li:not(:last-child):not(:nth-last-child(2)) {
     display: none;
+  }
+  div.heroSvg svg {
+    visibility: hidden;
   }
   .wrapper {
     margin: 1em;
